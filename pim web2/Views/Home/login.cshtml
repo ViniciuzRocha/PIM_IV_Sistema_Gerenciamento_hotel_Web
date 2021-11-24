@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "login";
+}
+
+<div id="login-container">
+    <h1 id="login">Entre</h1>
+    <form action="@Url.Action("LoginHospede")" method="post">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off">
+        <label for="password">Senha</label>
+        <input type="password" name="senha" id="password" placeholder="Digite sua senha">
+        @*<a href="" id="esqueceu-senha">Esqueceu a senha?</a>*@
+        <input type="submit" value="Entrar">
+    </form>
+    @*<div id="register-container">
+        <p>
+            Ainda não tem uma conta?
+            <a href="/home/cadastro">Cadastre-se</a>
+        </p>
+    </div>*@
+</div>
+
+
+<style>
+    /* geral */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Helvetica;
+        color: #FFF;
+        border: none;
+    }
+
+    body {
+        background-color: #094252;
+    }
+
+    textarea:focus, input:focus {
+        outline: none;
+    }
+
+        a:hover {
+            color: #08558B;
+        }
+
+    /* container login */
+    #login-container {
+        background-color: #FFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        padding: 20px 30px;
+        margin-top: 10vh;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* formulário */
+    form {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    label, input {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 1em;
+        color: #323232
+    }
+
+    input {
+        border-bottom: 2px solid #323232;
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #323232;
+    }
+
+        input:focus {
+            border-bottom: 2px solid #08558B;
+        }
+
+    #esqueceu-senha {
+        display: block;
+        text-align: right;
+        font-size: .8rem;
+    }
+
+    input[type="submit"] {
+        text-align: center;
+        text-transform: uppercase;
+        border: none;
+        height: 30px;
+        border-radius: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #FFF;
+        background-color: #094252;
+        font-weight: bold;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #1B223C;
+            transition: .5s;
+        }
+
+    /* registrar */
+    #register-container p {
+        margin-bottom: 10px;
+        color: #323232;
+        font-size: 1rem;
+    }      
+
+    #login {
+        color: #323232;
+    }
+</style>
+
+
+

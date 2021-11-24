@@ -1,0 +1,298 @@
+﻿@{
+    ViewBag.Title = "reservas";
+}
+
+<div id="reservar">
+    <divstyle>
+        <h3 style="color: white; text-shadow: 0.1em 0.1em 0.2em black;text-align:center; font-size:2em;">Faça uma reserva</h3>
+        <p style="color: white; text-shadow: 0.1em 0.1em 0.2em black">Nossos quartos são equipados com tudo que você precisa para se sentir em casa.</p>
+    </divstyle>
+
+    <div class="formulario">
+        <form style="text-align:center;align-items:center" method="post" action="@Url.Action("novareserva")">
+            <h2 style="font-size:1em;font-weight:bold">Escolha a data da sua reserva</h2>
+            <label> Check-in:</label>
+            <input type="date" name="entrada">
+            <br>
+            <label> Check-out:</label>
+            <input type="date" name="saida">
+            <h2 style="font-size:1em;font-weight:bold">Escolha seu quarto</h2>
+            <input type="radio" name="radio" value="STANDART" />
+            <label>Standart</label>
+            <input type="radio" name="radio" value="MASTER" />
+            <label>Master</label>
+            <input type="radio" name="radio" value="DELUXE" />
+            <label>Deluxe</label>
+            <h2 style="font-size:1em;font-weight:bold">Informe o seu CPF</h2>
+            <!--Selecionar um CPF-->
+            <input style="border:solid;text-align:center" type="text" name="cpf" placeholder="" />
+            <br />
+            <input type="submit" value="Reservar">
+        </form>
+    </div>
+</div>
+
+<div id="quartos">
+    <h1>Nossos quartos e suites</h1>
+    <br />
+
+    <br>
+    <div class="quarto-imagem">
+        <div class="suite">
+            <img src="https://viajeseumundo.com/wp-content/uploads/2018/02/quarto-standard-queen-hotel-sleep-inn-guarulhos.jpg" alt="imagemX">
+            <h4>Standart</h4>
+            <h6>Uma cama de casal com banheiro</h6>
+        </div>
+
+        <div class="suite">
+            <img src="https://andreacarladinelli.com.br/2017/wp-content/uploads/2017/08/08_panambi.jpg" alt="imagemX">
+            <h4>Master</h4>
+            <h6>Duas camas de solteiro com banheiro</h6>
+        </div>
+
+        <div class="suite">
+            <img src="https://d18m3re1tsq8hv.cloudfront.net/wp-content/uploads/2015/07/viajar-resort-fotos-galeria-acomodacao-quarto-tivoli-eco-resort-suite-deluxe.jpg" alt="imagemX">
+            <h4>Deluxe</h4>
+            <h6>Uma cama de casal com banheiro</h6>
+        </div>
+    </div>
+</div>
+
+<div id="servicos">
+    <br />
+    <h3>Nossos quartos contam com</h3>
+    <div class="nossos-servicos">
+        <div class="oferecidos">
+            <img src="https://cdn-icons.flaticon.com/png/512/2744/premium/2744650.png?token=exp=1636124384~hmac=e19019370ca763d0cb13a03737542607">
+            <p>Ar condicionado</p>
+        </div>
+
+        <div class="oferecidos">
+            <img src="https://cdn-icons-png.flaticon.com/512/88/88014.png">
+            <p>WIFI grátis</p>
+        </div>
+        <div class="oferecidos">
+            <img src="https://cdn-icons.flaticon.com/png/512/896/premium/896456.png?token=exp=1636124452~hmac=3bb4dfa9439a30c51b40a875fd3f6435">
+            <p>TVs de tela plana</p>
+        </div>
+    </div>
+
+    <div class="nossos-servicos">
+        <div class="oferecidos">
+            <img src="https://cdn-icons.flaticon.com/png/512/3139/premium/3139630.png?token=exp=1636124493~hmac=cb69ff05aaa7d2d3b5ef27b29c54f245">
+            <p>Banheiro</p>
+        </div>
+        <div class="oferecidos">
+            <img src="https://cdn-icons.flaticon.com/png/512/2571/premium/2571838.png?token=exp=1636124538~hmac=cab3781da54853320f65305db49d346b">
+            <p>secador de cabelo</p>
+        </div>
+        <div class="oferecidos">
+            <img src="https://cdn-icons.flaticon.com/png/512/911/premium/911698.png?token=exp=1636124601~hmac=46a91ab04b4d15168620f5073e6c0ffa">
+            <p>Cortinas blackout</p>
+        </div>
+    </div>
+    <br><br>
+
+</div>
+
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Helvetica;
+        color: #9a9a9a;
+        border: none;
+        align-items: center;
+    }
+
+
+
+    body {
+        background-color: #094252;
+    }
+
+    form {
+        color: black;
+    }
+
+    #reservar {
+        background: url(https://www.vitoriahoteis.com.br/wp-content/uploads/2018/12/Hotel-Convention-Indaiatuba-1200x798.jpg) no-repeat;
+        background-size: 36em;
+        background-position-x: left;
+        background-color: snow;
+        color: #323232;
+        width: 80vw;
+        border-radius: 8px;
+        margin: 1%;
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+
+
+        #reservar h3 {
+            font-size: 2em;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        #reservar p {
+            font-size: 0.8em;
+            color: black;
+        }
+
+
+        #reservar div {
+            width: 40%;
+        }
+
+        #reservar input[type="date"] {
+            width: 50%;
+            border-radius: 8px;
+            border: none;
+            font-size: 1em;
+            text-align: center;
+            color: black;
+            background-color: #b8d9e2;
+            margin-top: 10px;
+        }
+
+        #reservar label {
+            border-radius: 8px;
+            border: none;
+            font-size: 1em;
+            text-align: center;
+            color: black;
+            margin-top: 10px;
+        }
+
+    input[type="submit"] {
+        text-align: center;
+        text-transform: uppercase;
+        border: none;
+        height: 30px;
+        border-radius: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #FFF;
+        background-color: #094252;
+        font-weight: bold;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #1B223C;
+            transition: .5s;
+        }
+
+    #Atributos {
+        display: flex;
+        justify-content: space-around;
+        margin: 1%;
+    }
+
+
+    #quartos {
+        color: black;
+        height: 45vh;
+        margin: 0 auto;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1830px;
+    }
+
+        #quartos h1 {
+            color: white;
+            text-align: center;
+        }
+
+        #quartos .quarto-imagem {
+            display: flex;
+            height: 30vh;
+        }
+
+    .suite {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 1%;
+        width: 25vw;
+    }
+
+        .suite h6, h4 {
+            font-weight: 400;
+        }
+
+        .suite h4 {
+            font-size: 20px;
+        }
+
+        .suite h6 {
+            font-size: 14px;
+        }
+
+        .suite img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+            .suite img:hover {
+                opacity: 0.5;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+    #servicos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+    }
+
+        #servicos .nossos-servicos {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+        }
+
+    .nossos-servicos div {
+        background: gainsboro;
+        width: 25vw;
+        border-radius: 8px;
+        margin: 5px 10px;
+    }
+
+
+    .oferecidos {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 30px;
+    }
+
+        .oferecidos:hover {
+            opacity: 0.5;
+            transition: 0.2s;
+        }
+
+        .oferecidos p {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: black;
+        }
+
+        .oferecidos img {
+            width: 30%;
+            transition: 0.2s;
+        }
+</style>

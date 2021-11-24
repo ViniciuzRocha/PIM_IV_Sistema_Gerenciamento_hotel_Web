@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "cadastro";
+}
+
+<div id="login-container">
+    <form action="@Url.Action("CadastroHospede")" method="post">
+        <h1 id="titulo">Cadastre-se</h1>
+        <!--<label for="Name">Nome Completo</label>-->
+        <input type="text" name="nome" placeholder="Digite seu nome">
+
+
+        <input type="text" name="CPF" placeholder="Digite seu CPF">
+
+
+        <input type="email" name="email" placeholder="Digite seu email">
+
+
+        <input type="text" name="celular" placeholder="Digite seu celular">
+
+
+        <input type="text" name="cep" placeholder="Digite seu CEP">
+
+        <input type="password" name="senha" placeholder="Informa sua senha de acesso">
+
+        <div id="checksexo">
+            <label>Feminino</label>
+            <input type="radio" name="sexo" id="checks" value="F">
+        </div>
+        <div id="checksexo">
+            <label>Masculino</label>
+            <input type="radio" name="sexo" id="checks" value="M" />
+        </div>
+
+        <input type="submit" value="Continuar" <a href="/home/reserva"></a> >
+    </form>
+    <div id="register-container">
+        <p>
+            Já tem uma conta? clique
+            <a href="/home/login">aqui</a>
+            para voltar
+        </p>
+    </div>
+</div>
+
+
+<style>
+    /* geral */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Helvetica;
+        color: #FFF;
+        border: none;
+    }
+
+    body {
+        background-color: #094252;
+    }
+
+    #titulo {
+        color: #000000;
+    }
+
+    textarea:focus, input:focus {
+        outline: none;
+    }
+
+    a:hover {
+        color: #08558B;
+    }
+
+    /* container login */
+    #login-container {
+        background-color: #FFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        padding: 20px 30px;
+        margin-top: 10vh;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* formulário */
+    form {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    label, input {
+        display: flex;
+        width: 100%;
+        text-align: left;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 1em;
+        color: #323232
+    }
+
+
+
+    input {
+        border-bottom: 2px solid #323232;
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #323232;
+    }
+
+        input:focus {
+            border-bottom: 2px solid #08558B;
+        }
+
+    #esqueceu-senha {
+        display: block;
+        text-align: right;
+        font-size: .8rem;
+    }
+
+    input[type="submit"] {
+        text-align: center;
+        text-transform: uppercase;
+        border: none;
+        height: 30px;
+        border-radius: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #FFF;
+        background-color: #094252;
+        font-weight: bold;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #1B223C;
+            transition: .5s;
+        }
+
+    /* registrar */
+    #register-container p {
+        margin-bottom: 10px;
+        color: #323232;
+        font-size: 1rem;
+    }
+
+    #login {
+        color: #323232;
+    }
+    #checksexo{
+        display: flex;
+        align-items: initial;
+        text-align: right;
+    }
+    #checks{
+        
+    }
+</style>

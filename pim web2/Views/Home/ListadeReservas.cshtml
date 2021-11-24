@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PIM_IV_MODEL.Reserva>
+
+@{
+    ViewBag.Title = "ListadeReservas";
+}
+
+<h2>ListadeReservas</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.rID_Reserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rQuarto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEntrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rSaida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rHospede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rValor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.rID_Reserva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rQuarto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEntrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rSaida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rHospede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rValor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Cancelar", "CancelarReserva", item) |
+        </td>
+    </tr>
+}
+
+</table>
